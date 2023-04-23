@@ -1,0 +1,135 @@
+@import url(https://fonts.google.com/specimen/Montserrat);
+@import url(https://fonts.googleapis.com/css2?family=Fraunces);
+
+/*Set the backgroud color of the page and the position of the card*/
+body{
+    background-color: hsl(30, 38%, 92%);    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/*set the card properties*/
+.card{
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+    /*phone size : Iphone 6*/
+
+    width: 375px;
+    height: 667px;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;    
+}
+/*set the width of each part of the card*/
+.product-img{
+    display: flex;
+    width: 100%;
+    height: 40%;
+   
+}
+.product-img img{
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+/*set the padding for the card details */
+.product-info{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60%;
+    box-sizing: border-box;
+    padding: 10px 30px;   
+}
+/*set the properties the text in all the page*/
+body p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);  
+    
+}
+/*set the spacing for the word perfume*/
+#perfume{
+    letter-spacing: 5px;
+}
+/*set properties for the product name*/
+#header{
+    font-family: 'Fraunces', serif;
+    font-size: 37px;
+    font-weight: 700;
+    margin-top: -5px;
+    line-height: 35px;
+    color: hsl(212, 21%, 14%);
+}
+/*set the price in one row with flex propertie*/
+.price{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 40px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+/*set the properties for the price after reduction*/
+.price div:first-child p{
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+}
+/*set properties for the original price*/
+.price div:last-child p{
+    text-decoration: line-through;
+padding-left: 17px;
+}
+/*set the properties for the button*/
+button{
+    width: 100%;
+    height: 45px;
+    background-color: hsl(158, 36%, 37%);
+    border: 0px;
+    border-radius: 10px ;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+}
+/*give a space between the icon and the text in the button*/
+button img{
+    position:relative; 
+    left: -0.8rem;
+}
+button:hover{
+    background-color: hsl(141, 24%, 58%);
+}
+/*set a focus propertie for the button*/
+button:focus{
+    background-color: hsl(158, 100%, 7%);
+}
+
+
+@media (min-width: 600px){
+    .card{
+        display: flex;
+        flex-direction: row;
+        width: 550px;
+        height: 400px;
+    }
+    .product-img, .product-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+    }
+    body p{ 
+        font-size: 14px;
+    }
+
+}
